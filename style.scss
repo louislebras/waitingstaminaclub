@@ -1,3 +1,12 @@
+@font-face {
+  font-family: "Stamina Bold";
+  src: url("./staminabold.woff2") format("woff2"),
+    url("./staminabold.woff") format("woff");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 800;
+}
+
 body {
   display: flex;
   align-items: center;
@@ -11,5 +20,42 @@ body {
   img {
     height: 110px;
     margin-bottom: 40px;
+  }
+
+  p {
+    width: auto;
+  }
+}
+
+.nav-item-typo {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: calc(
+    15px + (100vw - ((100vw - 850px) / 6 + 15px) * 2 - 1600px) * 0.0005 * 20
+  );
+  font-family: "Stamina Bold";
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  line-height: 100%;
+  position: relative;
+  color: #e8e4df;
+  font-weight: 400;
+  padding: 7px 11px 6px;
+  border-radius: 400px;
+  border: 1px solid white;
+  position: relative;
+  top: -20px;
+}
+
+@media (max-width: 800px) {
+  .nav-item-typo {
+    font-size: 9px;
+    line-height: 130%;
+  }
+
+  body {
+    img {
+      height: 90px;
+    }
   }
 }
